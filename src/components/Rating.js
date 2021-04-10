@@ -36,6 +36,9 @@ function Rating({value, text, color}) {
                          value >= 5 ? "star" : value >= 4.5 ? "star-half-alt" : "star"
                          ]}></FontAwesomeIcon>
             </span>
+            <span>
+                {text && text}
+            </span>
         </div>
     )
 }
