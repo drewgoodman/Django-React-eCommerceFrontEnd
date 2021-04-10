@@ -1,7 +1,16 @@
 import { Container } from 'react-bootstrap'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
+
+// register Font Awesome Icons used
+library.add(
+  faShoppingCart,
+  faUser
+)
+
 
 function App() {
   return (
