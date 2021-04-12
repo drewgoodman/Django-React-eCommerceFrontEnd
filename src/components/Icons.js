@@ -5,7 +5,8 @@ import {
     faShoppingCart,
     faStar,
     faStarHalfAlt,
-    faUser
+    faUser,
+    faTrash
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons'
@@ -16,7 +17,8 @@ const Icons = () => {
         faStar,
         farStar,
         faStarHalfAlt,
-        faUser
+        faUser,
+        faTrash
     );
 }
 
