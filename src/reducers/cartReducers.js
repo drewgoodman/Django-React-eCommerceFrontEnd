@@ -17,7 +17,6 @@ import {
             } else {
                 return { ...state, cartItems: [...state.cartItems, item]}
             }
-            return { loading: true, products: [] }
 
         case CART_REMOVE_ITEM:
             return { loading: false, products: action.payload }
