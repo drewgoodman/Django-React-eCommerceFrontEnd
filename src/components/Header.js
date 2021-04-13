@@ -1,9 +1,22 @@
 import React from 'react'
-import { Navbar, Nav, Container, Row } from 'react-bootstrap'
+import { useDispatch, useSelector } from 'react-redux'
+import { Navbar, Nav, Container, Row, NavDropdown } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { LinkContainer } from 'react-router-bootstrap'
 
+import { logout } from '../actions/userActions'
+
 function Header() {
+
+    const userLogin = useSelector(state => state.userLogin)
+    const { userInfo } = userLogin
+
+    const dispatch = useDispatch()
+
+    const logoutHandler = () => {
+        dispatch(logout())
+    }
+
     return (
         <header>
             <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg">
@@ -19,10 +32,22 @@ function Header() {
                                 <Nav.Link><FontAwesomeIcon icon="shopping-cart" />Cart</Nav.Link>
                             </LinkContainer>
 
-                            <LinkContainer to="/login">
-                                <Nav.Link><FontAwesomeIcon icon="user" />Login</Nav.Link>
-                            </LinkContainer>
-                            
+                            {
+                                userInfo ? (
+                                    <NavDropdown title={userInfo.name} id="username">
+                                        <LinkContainer to="/profile">
+                                            <NavDropdown.Item>Profile</NavDropdown.Item>
+                                        </LinkContainer>
+                                        <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+                                    </NavDropdown>
+                                ) : (
+                                    <LinkContainer to="/login">
+                                        <Nav.Link><FontAwesomeIcon icon="user" />Login</Nav.Link>
+                                    </LinkContainer>
+                                )
+                            }
+
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
