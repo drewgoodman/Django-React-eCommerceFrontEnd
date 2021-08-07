@@ -6,7 +6,8 @@ import {
     faStar,
     faStarHalfAlt,
     faUser,
-    faTrash
+    faTrash,
+    faTimes,
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons'
@@ -18,7 +19,8 @@ const Icons = () => {
         farStar,
         faStarHalfAlt,
         faUser,
-        faTrash
+        faTrash,
+        faTimes
     );
 }
 
