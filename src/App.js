@@ -14,6 +14,7 @@ import ProfileScreen from './screens/ProfileScreen'
 import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
 import OrderScreen from './screens/OrderScreen'
+import UserListScreen from './screens/UserListScreen'
 
 import Icons from './components/Icons'
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/placeorder" component={PlaceOrderScreen} />
           <Route path="/profile" component={ProfileScreen} />
           <Route path="/order/:id" component={OrderScreen} />
+          <Route path="/admin/userlist/" component={UserListScreen} />
         </Container>
       </main>
       <Footer />

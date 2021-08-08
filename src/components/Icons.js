@@ -8,6 +8,9 @@ import {
     faUser,
     faTrash,
     faTimes,
+    faCheck,
+    faEdit,
+
 } from '@fortawesome/free-solid-svg-icons'
 
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons'
@@ -20,7 +23,9 @@ const Icons = () => {
         faStarHalfAlt,
         faUser,
         faTrash,
-        faTimes
+        faTimes,
+        faCheck,
+        faEdit,
     );
 }
 
