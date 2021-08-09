@@ -63,7 +63,7 @@ function UserListScreen({ history }) {
                                     ) : (
                                         <FontAwesomeIcon icon="times" style={{color: 'red'}}/>
                                     )} </td>
-                                    <td><LinkContainer to={`/admin/user/${user._id}`}>
+                                    <td><LinkContainer to={`/admin/user/${user._id}/edit`}>
                                         <Button variant='light' className='btn-sm'>
                                         <FontAwesomeIcon icon="edit" />
                                         </Button>
