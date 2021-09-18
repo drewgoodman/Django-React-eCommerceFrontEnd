@@ -10,6 +10,7 @@ import {
     faTimes,
     faCheck,
     faEdit,
+    faPlus
 
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -26,6 +27,7 @@ const Icons = () => {
         faTimes,
         faCheck,
         faEdit,
+        faPlus
     );
 }
 
