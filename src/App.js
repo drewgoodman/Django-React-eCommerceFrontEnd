@@ -16,6 +16,7 @@ import ProductScreen from './screens/ProductScreen'
 import OrderScreen from './screens/OrderScreen'
 import UserListScreen from './screens/UserListScreen'
 import ProductListScreen from './screens/ProductListScreen'
+import OrderListScreen from './screens/OrderListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import UserEditScreen from './screens/UserEditScreen'
 
@@ -37,7 +38,9 @@ function App() {
           <Route path="/payment" component={PaymentScreen} />
           <Route path="/placeorder" component={PlaceOrderScreen} />
           <Route path="/profile" component={ProfileScreen} />
+
           <Route path="/order/:id" component={OrderScreen} />
+          <Route path="/admin/orderslist" component={OrderListScreen} />
           
           <Route path="/admin/userlist/" component={UserListScreen} />
           <Route path="/admin/user/:id/edit" component={UserEditScreen} />
