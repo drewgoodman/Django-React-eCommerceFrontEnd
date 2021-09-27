@@ -9,15 +9,17 @@ import Product from '../components/Product'
 
 // import products from '../products'
 
-function HomeScreen() {
+function HomeScreen({history}) {
 
     const dispatch = useDispatch()
     const productList = useSelector(state => state.productList)
     const { error, loading, products } = productList
 
+    let keyword = history.location.search
+
     useEffect(() => {
-        dispatch(listProducts())
-    }, [dispatch])
+        dispatch(listProducts(keyword))
+    }, [dispatch, keyword])
 
     return (
         <div>
